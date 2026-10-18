@@ -1,0 +1,10 @@
+services:
+  web:
+    build: .
+    container_name: devops-cicd-web
+    ports:
+      - "8000:8000"
+    environment:
+      APP_NAME: devops-cicd-starter
+      PORT: "8000"
+    restart: unless-stopped
